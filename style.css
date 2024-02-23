@@ -31,10 +31,7 @@ header{
     z-index: 1;    
 }
 
-
-.nav a:hover{
-    color: blue;
-}
+.nav a:hover{color: blue;}
 
 .nav li{
     display: inline-block;
@@ -42,7 +39,7 @@ header{
 }
 
 .hero-contenitor{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.332), rgba(0,0,0,40));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.332), rgba(0,0,0,35));
     width: 100%;
     height: 100%;
     display: flex;
@@ -51,12 +48,8 @@ header{
 }
 
 .hero{
-    height: 600px;
-    display: flex; width: 100%; align-items: center;
-    background: url(foresta.jpg) no-repeat center center;
-    background-size: cover;
-    z-index: 0;
-    height: 100vh;
+    height: 600px;display: flex; width: 100%; align-items: center;background: url(foresta.jpg) no-repeat center center;background-size: cover;
+    z-index: 0;height: 100vh;
 }
 
 .hero__content{
@@ -66,16 +59,30 @@ header{
     margin: 0 auto;
     /* bottom: -120px; */
     color: white;
-    padding-bottom: 80px;
+    padding-bottom: 80px;   
+}
+
+.hero__content p{position: relative;bottom: 30px;left: 45px;}
+
+.hero-r{
+    display: flex; width: 100%;align-items: center;
+    height: 600px;
+    width: 100%;
+    background: url(corsa.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
     
-
 }
 
-.hero__content p{
+.heror__content{width: 100%;max-width: 1450px;margin: 0 auto;color: white;padding-bottom: 80px;   }
+
+.heror__content h1 p{
     position: relative;
-    bottom: 30px;
-    left: 45px;
+    bottom: 200px;
+    left: 70px;
+    color: white;
 }
+
 
 .top{
     display: flex;
@@ -111,6 +118,16 @@ header{
     color: blue;
 }
 
+@media(max-width: 768px){
+    .bot-left a{
+       font-size: 10px;
+    }
+    .bot-left{
+        bottom: 24px;
+        left: 10px;
+        padding: 0;
+    }
+}
 
 .grid{
     display: flex;
@@ -141,12 +158,53 @@ header{
     width: 50%;
 }
 
+
+
+.main-carousel{padding: 40px 0px;}
+
+.carousel-cell{display: flex;width: 350px;height: 350px;
+    margin-right: 40px;
+}
+.c1{background: url(newbalace-550.jpg);background-size: cover; background-position-y: bottom;
+}
+.c2{
+    background: url(newbalance-200r.jpg) ;background-size: cover;background-position-y: bottom;
+}
+
+.c3{
+    background: url(nike-dunkretro.jpg);background-position: 25%;background-size: 100%;background-repeat: no-repeat;background-position-y: bottom;
+}
+.c4{
+    background: url(nike-airjordan1lowog.jpeg) ; background-size: 100%;
+    background-repeat: no-repeat;background-position-y: bottom;
+}
+.c5{
+    background: url(nikexsupreme-airforce1mini.jpg) ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+
+}
+.c6{
+    background: url(nike-dunklebronjames_fruitypebbles.jpg) ;background-size: 100%;background-repeat: no-repeat;background-position-y: bottom;
+}
+
+.cr1{background: url(alphafly2.png);background-size: cover; background-position-y: bottom;
+}
+.cr2{background: url(adiosproevo.png);background-size: cover; background-position-y: bottom;background-position: 35%;
+}
+.cr3{background: url(glycerinsthealthfit21.png);background-size: cover; background-position-y: bottom;
+}
+.cr4{background: url(newbalace-550.jpg);background-size: cover; background-position-y: bottom;
+}
+
 footer{
     background-color: #282C31;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
     color: white;
+    line-height: 30px;
 }
 
 
@@ -156,4 +214,8 @@ footer{
     .col-25{
         width: 50%;
     }
+}
+
+@media(max-width: 768px){
+    .big-text{font-size: 40px;}
 }

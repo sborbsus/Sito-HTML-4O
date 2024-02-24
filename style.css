@@ -186,7 +186,7 @@ header{
 .main-carousel{padding: 40px 0px;}
 
 .carousel-cell{display: flex;width: 350px;height: 350px;
-    margin-right: 40px;position: relative; align-items: end;padding: 20px;
+    margin-right: 40px;
 }
 .c1{background: url(newbalace-550.jpg);background-size: cover; background-position-y: bottom;
 }

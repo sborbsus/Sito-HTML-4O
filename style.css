@@ -18,7 +18,7 @@ a{
 .normal-text{font-size: 20px;}
 .small-text{font-size: 14px;}
 .button{padding: 18px 28px ; background-color: #316bff; color: white; border-radius: 4px;}
-
+.talc{text-align: center; padding: 20px;}
 
 
 header{
@@ -90,7 +90,7 @@ header{
     padding-top: 30px;
 }
 
-.adidas{
+.adidasrun{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -122,12 +122,27 @@ header{
     .bot-left a{
        font-size: 10px;
     }
+    .arrow{
+        width: 10px;
+        height: 10px;
+    }
     .bot-left{
         bottom: 24px;
         left: 10px;
         padding: 0;
+        height: 30px;
+        align-items: center;
+
     }
 }
+
+.tips{ margin: 20px 294px;}
+.tips ul{list-style-type: none;display: flex; flex-wrap: wrap;}
+
+
+.tips li{width: 100%;}
+/* .tips li p img{width: 50%;} */
+
 
 .grid{
     display: flex;
@@ -139,6 +154,14 @@ header{
     padding: 10px;
 }
 
+.col-33{
+    width: 33.33%;
+    padding: 10px;
+    text-align: center;
+}
+
+.nike img{width:70%;height: 80%;}
+.asics{width: 70%;height: 80%;}
 .poster{
     display: flex;
     /* align-items: center; */
@@ -163,7 +186,7 @@ header{
 .main-carousel{padding: 40px 0px;}
 
 .carousel-cell{display: flex;width: 350px;height: 350px;
-    margin-right: 40px;
+    margin-right: 40px;position: relative; align-items: end;padding: 20px;
 }
 .c1{background: url(newbalace-550.jpg);background-size: cover; background-position-y: bottom;
 }
@@ -172,21 +195,20 @@ header{
 }
 
 .c3{
-    background: url(nike-dunkretro.jpg);background-position: 25%;background-size: 100%;background-repeat: no-repeat;background-position-y: bottom;
+    background: url(nike-dunkretro.jpg);background-position: 25%;background-size: 100%;background-repeat: no-repeat;
+    background-position-y: center;
+    position: relative; bottom: 15px;
 }
 .c4{
     background: url(nike-airjordan1lowog.jpeg) ; background-size: 100%;
-    background-repeat: no-repeat;background-position-y: bottom;
+    background-repeat: no-repeat;background-position-y: center;
 }
 .c5{
     background: url(nikexsupreme-airforce1mini.jpg) ;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-
+    background-size: 100%;background-repeat: no-repeat;background-position-y: center;
 }
 .c6{
-    background: url(nike-dunklebronjames_fruitypebbles.jpg) ;background-size: 100%;background-repeat: no-repeat;background-position-y: bottom;
+    background: url(nike-dunklebronjames_fruitypebbles.jpg) ;background-size: 100%;background-repeat: no-repeat;background-position-y: center;
 }
 
 .cr1{background: url(alphafly2.png);background-size: cover; background-position-y: bottom;
@@ -195,7 +217,7 @@ header{
 }
 .cr3{background: url(glycerinsthealthfit21.png);background-size: cover; background-position-y: bottom;
 }
-.cr4{background: url(newbalace-550.jpg);background-size: cover; background-position-y: bottom;
+.cr4{background: url(invincible3.png);background-size: cover; background-position-y: bottom;
 }
 
 footer{

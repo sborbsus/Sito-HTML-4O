@@ -200,14 +200,26 @@ header{
 .c6{
     background: url(nike-dunklebronjames_fruitypebbles.jpg) ;background-size: 100%;background-repeat: no-repeat;background-position-y: center;
 }
+.c7{background: url(adidas-ozweego.png);background-size: cover; background-position-y: bottom;
+}
+.c8{background: url(adidas-ultraboost1.0.jpg);background-size: cover; background-position-y: bottom;
+}
 
 .cr1{background: url(alphafly2.png);background-size: cover; background-position-y: bottom;
 }
-.cr2{background: url(adiosproevo.png);background-size: cover; background-position-y: bottom;background-position: 35%;
+.cr2{background: url(adiosproevo.png);background-size: cover; background-position-y: bottom;background-position: 45%;
 }
 .cr3{background: url(glycerinsthealthfit21.png);background-size: cover; background-position-y: bottom;
 }
 .cr4{background: url(invincible3.png);background-size: cover; background-position-y: bottom;
+}
+.cr5{background: url(adidas-solarboost5.jpg);background-size: cover; background-position-y: bottom; background-position: 75%
+}
+.cr6{background: url(adidas-supernovarise.jpg);background-size: cover; background-position-y: bottom;
+}
+.cr7{background: url(newbalance-freschfoamx.jpg);background-size: cover; background-position-y: bottom; background-position: 50%
+}
+.cr8{background: url(puma-magnifynitro2.jpg);background-size: cover; background-position-y: bottom;
 }
 
 footer{

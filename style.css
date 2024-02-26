@@ -18,6 +18,10 @@ a{
 .small-text{font-size: 14px;}
 .button{padding: 18px 28px ; background-color: #316bff; color: white; border-radius: 4px;}
 .talc{text-align: center; padding: 20px;}
+.ptop{padding-top: 40px;}
+.mrg{margin: 0px 180px;}
+.mrg2{margin: 0px 120px;}
+
 
 header{
     display: flex;
@@ -177,32 +181,32 @@ header{
     margin-right: 40px;
 }
 
-.c1{background: url(newbalace-550.jpg);background-size: cover; background-position-y: bottom;
+.c1{background: url(newbalace-550.jpg);background-size: cover; background-position-y: bottom;align-items: end;
 }
 
 .c2{
-    background: url(newbalance-200r.jpg) ;background-size: cover;background-position-y: bottom;
+    background: url(newbalance-200r.jpg) ;background-size: cover;background-position-y: bottom;align-items: end;
 }
 
 .c3{
     background: url(nike-dunkretro.jpg);background-position: 25%;background-size: 100%;background-repeat: no-repeat;
     background-position-y: center;
-    position: relative; bottom: 15px;
+    align-items: end;
 }
 .c4{
     background: url(nike-airjordan1lowog.jpeg) ; background-size: 100%;
-    background-repeat: no-repeat;background-position-y: center;
+    background-repeat: no-repeat;background-position-y: center;align-items: end;
 }
 .c5{
     background: url(nikexsupreme-airforce1mini.jpg) ;
-    background-size: 100%;background-repeat: no-repeat;background-position-y: center;
+    background-size: 100%;background-repeat: no-repeat;background-position-y: bottom;align-items: end;
 }
 .c6{
-    background: url(nike-dunklebronjames_fruitypebbles.jpg) ;background-size: 100%;background-repeat: no-repeat;background-position-y: center;
+    background: url(nike-dunklebronjames_fruitypebbles.jpg) ;background-size: 100%;background-repeat: no-repeat;background-position-y: center;align-items: end;
 }
-.c7{background: url(adidas-ozweego.png);background-size: cover; background-position-y: bottom;
+.c7{background: url(adidas-ozweego.png);background-size: cover; background-position-y: bottom;align-items: end;
 }
-.c8{background: url(adidas-ultraboost1.0.jpg);background-size: cover; background-position-y: bottom;
+.c8{background: url(adidas-ultraboost1.0.jpg);background-size: cover; background-position-y: bottom;align-items: end;
 }
 
 .cr1{background: url(alphafly2.png);background-size: cover; background-position-y: bottom;
@@ -229,6 +233,9 @@ footer{
     padding-bottom: 15px;
     color: white;
     line-height: 30px;
+}
+footer a:hover{
+    text-decoration: underline;
 }
 
 @media (max-width: 768px){

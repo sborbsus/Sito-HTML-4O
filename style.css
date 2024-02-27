@@ -48,7 +48,7 @@ header{
 
 }
 .hero{
-    height: 600px;display: flex; width: 100%; align-items: center;background: url(foresta.jpg) no-repeat center center;background-size: cover;
+    height: 600px;display: flex; width: 100%; align-items: center;background: url(../Sito-HTML-4O/Immagini/foresta.jpg) no-repeat center center;background-size: cover;
     z-index: 0;height: 100vh;
 }
 .hero__content{
@@ -65,7 +65,7 @@ header{
     display: flex; width: 100%;align-items: center;
     height: 600px;
     width: 100%;
-    background: url(corsa.jpg) no-repeat center center;
+    background: url(../Sito-HTML-4O/Immagini/corsa.jpg) no-repeat center center;
     background-size: cover;
     height: 100vh;
     
@@ -182,49 +182,49 @@ header{
 }
 /* .carousel-cell:hover{width: 350px; height: 350px; z-index: -1;} */
 
-.c1{background: url(newbalace-550.jpg);background-size: cover; background-position-y: bottom;align-items: end;
+.c1{background: url(../Sito-HTML-4O/Immagini/newbalace-550.jpg);background-size: cover; background-position-y: bottom;align-items: end;
 }
 
 .c2{
-    background: url(newbalance-200r.jpg) ;background-size: cover;background-position-y: bottom;align-items: end;
+    background: url(../Sito-HTML-4O/Immagini/newbalance-200r.jpg) ;background-size: cover;background-position-y: bottom;align-items: end;
 }
 
 .c3{
-    background: url(nike-dunkretro.jpg);background-position: 25%;background-size: 100%;background-repeat: no-repeat;
+    background: url(../Sito-HTML-4O/Immagini/nike-dunkretro.jpg);background-position: 25%;background-size: 100%;background-repeat: no-repeat;
     background-position-y: center;
     align-items: end;
 }
 .c4{
-    background: url(nike-airjordan1lowog.jpeg) ; background-size: 100%;
+    background: url(../Sito-HTML-4O/Immagini/nike-airjordan1lowog.jpeg) ; background-size: 100%;
     background-repeat: no-repeat;background-position-y: center;align-items: end;
 }
 .c5{
-    background: url(nikexsupreme-airforce1mini.jpg) ;
+    background: url(../Sito-HTML-4O/Immagini/nikexsupreme-airforce1mini.jpg) ;
     background-size: 100%;background-repeat: no-repeat;background-position-y: bottom;align-items: end;
 }
 .c6{
-    background: url(nike-dunklebronjames_fruitypebbles.jpg) ;background-size: 100%;background-repeat: no-repeat;background-position-y: center;align-items: end;
+    background: url(../Sito-HTML-4O/Immagini/nike-dunklebronjames_fruitypebbles.jpg) ;background-size: 100%;background-repeat: no-repeat;background-position-y: center;align-items: end;
 }
-.c7{background: url(adidas-ozweego.png);background-size: cover; background-position-y: bottom;align-items: end;
+.c7{background: url(../Sito-HTML-4O/Immagini/adidas-ozweego.png);background-size: cover; background-position-y: bottom;align-items: end;
 }
-.c8{background: url(adidas-ultraboost1.0.jpg);background-size: cover; background-position-y: bottom;align-items: end;
+.c8{background: url(../Sito-HTML-4O/Immagini/adidas-ultraboost1.0.jpg);background-size: cover; background-position-y: bottom;align-items: end;
 }
 
-.cr1{background: url(alphafly2.png);background-size: cover; background-position-y: bottom;
+.cr1{background: url(../Sito-HTML-4O/Immagini/alphafly2.png);background-size: cover; background-position-y: bottom;
 }
-.cr2{background: url(adiosproevo.png);background-size: cover; background-position-y: bottom;background-position: 45%;
+.cr2{background: url(../Sito-HTML-4O/Immagini/adiosproevo.png);background-size: cover; background-position-y: bottom;background-position: 45%;
 }
-.cr3{background: url(glycerinsthealthfit21.png);background-size: cover; background-position-y: bottom;
+.cr3{background: url(../Sito-HTML-4O/Immagini/glycerinsthealthfit21.png);background-size: cover; background-position-y: bottom;
 }
-.cr4{background: url(invincible3.png);background-size: cover; background-position-y: bottom;
+.cr4{background: url(../Sito-HTML-4O/Immagini/invincible3.png);background-size: cover; background-position-y: bottom;
 }
-.cr5{background: url(adidas-solarboost5.jpg);background-size: cover; background-position-y: bottom; background-position: 75%
+.cr5{background: url(../Sito-HTML-4O/Immagini/adidas-solarboost5.jpg);background-size: cover; background-position-y: bottom; background-position: 75%
 }
-.cr6{background: url(adidas-supernovarise.jpg);background-size: cover; background-position-y: bottom;
+.cr6{background: url(../Sito-HTML-4O/Immagini/adidas-supernovarise.jpg);background-size: cover; background-position-y: bottom;
 }
-.cr7{background: url(newbalance-freschfoamx.jpg);background-size: cover; background-position-y: bottom; background-position: 50%
+.cr7{background: url(../Sito-HTML-4O/Immagini/newbalance-freschfoamx.jpg);background-size: cover; background-position-y: bottom; background-position: 50%
 }
-.cr8{background: url(puma-magnifynitro2.jpg);background-size: cover; background-position-y: bottom;
+.cr8{background: url(../Sito-HTML-4O/Immagini/puma-magnifynitro2.jpg);background-size: cover; background-position-y: bottom;
 }
 
 footer{

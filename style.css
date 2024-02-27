@@ -178,8 +178,9 @@ header{
 .main-carousel{padding: 40px 0px;}
 
 .carousel-cell{display: flex;width: 350px;height: 350px;
-    margin-right: 40px;
+    margin-right: 60px;
 }
+/* .carousel-cell:hover{width: 350px; height: 350px; z-index: -1;} */
 
 .c1{background: url(newbalace-550.jpg);background-size: cover; background-position-y: bottom;align-items: end;
 }
@@ -247,3 +248,29 @@ footer a:hover{
 @media(max-width: 768px){
     .big-text{font-size: 40px;}
 }
+
+/* .zoom {
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAABRElEQVRIie3Vvy5EQRTH8Q/RbImHUVi5/kQh0ZEsD6DkGXTiGfREQqfagmwsCS3eAYVWSbGzMjvu3OsmFMQvmWRy5szvOyd37hn+isai+Rxm8ZbkvOCgwmMLUyW+V7iE8WhhCXtYwWQ0WjUHbSX5K8FnqSx5F108Yb7GOKf5sL8b/DBaCVxjDcdYbAhoh32bwedDKQT6AXTUANTGaQCcp4tlkBh0+AVQGyc5QAp5DiMGdQwqKjKAwqCCTgJIvWrVxqPPFQ3jC03MqlTgNondyFf4r59Xgbskdu8bv0nuFuVuXaV2sJ3ECoNeVPWflK2PeMU/4xSmk5MeYwO9DKSnvNeNeOXaStyLLjI5Q/WxrqLXlUGaAGLQl5rqj70nE0nSMs4wEwbNn99brIrelBjSx36YT0bx15rTD5/foR7C6Nfs+4V6B2p1Sa5+2199AAAAAElFTkSuQmCC"), pointer;
+ }
+ 
+.zoomOpen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    padding: 25px;
+    z-index: 99999;
+    zoom: .85;
+    opacity: 0;
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAAAp0lEQVRIie2VTQqAIBSE52BBP7evbS47QJ6iNgpio8/8oYgGXEg633ukDvBFrQD6Sl698buoA7ADmAoB1meMVaDBO9qEubSfVuJ3dAhzsQMG0h4oBrHrkwEhUAjCCsoGMUgxwGowRgyizffbUsaADR/ChsqB/orqkX/S5HS5an5Pmt/4nLfrVkyUvsIiKJYHftKx5BPzJDlwBFkfeurmCgAXtFTyepFOkXBc+2M5ykQAAAAASUVORK5CYII="), pointer;
+ }
+ 
+.zoomOpen > div {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+ } */

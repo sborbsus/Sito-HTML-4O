@@ -19,8 +19,8 @@ a{
 .button{padding: 18px 28px ; background-color: #316bff; color: white; border-radius: 4px;}
 .talc{text-align: center; padding: 20px;}
 .ptop{padding-top: 40px;}
-.mrg{margin: 0px 180px;}
-.mrg2{margin: 0px 120px;}
+.mrg{margin: 0px 2%;}
+.mrg2{margin: 0px 1.8%;}
 
 
 header{
@@ -52,13 +52,14 @@ header{
     z-index: 0;height: 100vh;
 }
 .hero__content{
-    /* position: relative; */
-    width: 100%;
+    position: absolute;
     max-width: 1450px;
+    width: auto;
     margin: 0 auto;
     /* bottom: -120px; */
     color: white;
-    padding-bottom: 80px;   
+    padding-bottom: 80px; 
+    padding-left: 30px;  
 }
 .hero__content p{position: relative;bottom: 30px;left: 45px;}
 .hero-r{
@@ -71,7 +72,7 @@ header{
     
 }
 
-.heror__content{width: 100%;max-width: 1450px;margin: 0 auto;color: white;padding-bottom: 80px;   }
+.heror__content{max-width: 1450px;width: 100%;margin: 0 auto;color: white;padding-bottom: 80px;   }
 .heror__content h1 p{
     position: relative;
     bottom: 200px;
@@ -131,7 +132,7 @@ header{
     }
 }
 
-.tips{ margin: 20px 294px;}
+.tips{ margin: 20px 2.2%;}
 .tips ul{list-style-type: none;display: flex; flex-wrap: wrap;}
 .tips li{width: 100%;}
 /* .tips li p img{width: 50%;} */
@@ -149,6 +150,7 @@ header{
 .col-33{
     width: 33.33%;
     padding: 10px;
+    padding-bottom: 2vh;
     text-align: center;
 }
 
@@ -173,12 +175,13 @@ header{
 
 .poster-img{
     width: 50%;
+    object-fit: cover;
 }
 
-.main-carousel{padding: 40px 0px;}
+.main-carousel{padding: 10px 0px;}
 
 .carousel-cell{display: flex;width: 350px;height: 350px;
-    margin-right: 60px;
+    /* margin-right: 60px; */
 }
 /* .carousel-cell:hover{width: 350px; height: 350px; z-index: -1;} */
 
@@ -230,6 +233,7 @@ header{
 footer{
     background-color: #282C31;
     text-align: center;
+    margin-top: 5vh;
     padding-top: 15px;
     padding-bottom: 15px;
     color: white;

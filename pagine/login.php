@@ -1,8 +1,6 @@
 <?php
     if (isset($_POST["username"])) $username = $_POST["username"]; else $username = "";
     if (isset($_POST["password"])) $password = $_POST["password"]; else $password = "";
-
-
 ?>
 
 <!DOCTYPE html>
@@ -50,9 +48,8 @@
         }
 
     ?>
-    <footer>
-        <a href="pagine/cookieeprivacy.html" style="color: white;">Info su privacy e cookie</a> <br>
-        Sito di: Brambilla Carlo, Livieri Lorenzo, Rossetti Gabriele
-    </footer>
+    <?php 
+        require('pagine/footer.php');
+    ?>
 </body>
 </html>

@@ -89,15 +89,9 @@
         ?>
     </p>
 
-
-
-
-
-
-
-    <footer>
-        <a href="pagine/cookieeprivacy.html" style="color: white;">Info su privacy e cookie</a> <br>
-        Sito di: Brambilla Carlo, Livieri Lorenzo, Rossetti Gabriele
-    </footer>
+    <?php 
+        require('pagine/footer.php');
+    ?>
+    
 </body>
 </html>

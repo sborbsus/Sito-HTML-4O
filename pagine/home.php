@@ -10,7 +10,7 @@
     <title>Home</title>
 </head>
 <body>
-    <h2>cerca un tipo di scarpe</h2>
+    <h2>Cerca un tipo di scarpe</h2>
     <form action="" method="post">
         <table>
             <tr>

@@ -25,7 +25,12 @@
                     <li>
                         <a href="pagine/classici.html">Scopri i Classici</a>
                     </li>
+
+                    <li>
+                        <a href="pagine/login.php"  class="log"><img src="immagini/login.png" alt="" ></a>
+                    </li>
                 </ul>
+
 
             </div>
         </header>

@@ -15,12 +15,12 @@
         <table>
             <tr>
                 <td><label for="username">Username:</label></td>
-                <td><input type="text" value="username" name="$username"></td>
+                <td><input type="text"  value = "<?php echo $username ?>" name="$username"></td>
             </tr>
             <tr>
             <td>
                 <label for="password">Password:</label></td>
-                <td><input type="text" value="password" name="$password"></td>
+                <td><input type="text" name="$password"></td>
             </tr>
         </table>
         <input type="submit" value="accedi">

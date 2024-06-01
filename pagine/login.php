@@ -49,7 +49,7 @@
 
     ?>
     <?php 
-        require('pagine/footer.php');
+        require('footer.php');
     ?>
 </body>
 </html>

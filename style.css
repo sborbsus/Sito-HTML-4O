@@ -292,3 +292,26 @@ footer a:hover{
 	text-align: center;
 	padding: 10px;
 }
+
+/* #tab_dati_personali{
+	/* width: 500px; */
+	/* text-align: left;
+	margin: auto; */
+
+*/
+
+.scarpa{
+    width: 550px;
+    height: 200px;
+    border: 1px solid #000;
+
+    display: flex;
+}
+.scarpa_img{
+    width: 60px;
+    height: auto;
+}
+.scarpa__img img{
+    height: 60px;
+    width: auto;
+}

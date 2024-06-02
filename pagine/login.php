@@ -1,6 +1,7 @@
 <?php
     if (isset($_POST["username"])) $username = $_POST["username"]; else $username = "";
     if (isset($_POST["password"])) $password = $_POST["password"]; else $password = "";
+    if (isset($_POST["cod_utente"])) $cod_utente = $_POST["cod_utente"]; else $cod_utente = "";
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,7 @@
     <?php
         if (isset($_POST["username"]) and isset($_POST["password"])){
             require("../Data/connessione_db.php");
-            $sql = "SELECT username, password FROM utente WHERE username = '$username' AND password ='$password'";
+            $sql = "SELECT username, password, cod_utente FROM utente WHERE username = '$username' AND password ='$password'";
             $ris = $conn->query($sql) or  die("<p>Query fallita! ".$conn->error."</p>");
 
             if ($ris->num_rows == 0){
@@ -44,6 +45,7 @@
                 session_start();
                 
                 $_SESSION["username"] = $username;
+                $_SESSION["cod_utente"] = $cod_utente;
                 $conn->close();
 
                 header("location: home.php");

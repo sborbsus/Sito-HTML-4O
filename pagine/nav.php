@@ -18,15 +18,10 @@
                 } else {
                     echo "<li><a href='dati_personali.php'>Dati personali</a></li>";
                 }
-                if (basename($_SERVER['PHP_SELF']) == "ritira.php") {
-                    echo "<li id='active'>Ritira</li>";
+                if (basename($_SERVER['PHP_SELF']) == "preferiti.php") {
+                    echo "<li id='active'>Preferiti</li>";
                 } else {
-                    echo "<li><a href='ritira.php'>Ritira</a></li>";
-                }
-                if (basename($_SERVER['PHP_SELF']) == "riconsegna.php") {
-                    echo "<li id='active'>Riconsegna</li>";
-                } else {
-                    echo "<li><a href='riconsegna.php'>Riconsegna</a></li>";
+                    echo "<li><a href='preferiti.php'>Preferiti</a></li>";
                 }
                 if (basename($_SERVER['PHP_SELF']) == "logout.php") {
                     echo "<li id='active'>Logout</li>";

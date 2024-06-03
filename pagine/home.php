@@ -30,61 +30,72 @@
     <title>Home</title>
 </head>
 <body>
-
+    
     <?php require('nav.php'); ?>
-    <h2>Cerca un tipo di scarpe</h2>
-    <form action="" method="post" class="search">
-        <table id="tab_dati_personali">
-            <tr>
-                <td><label for="marca">Marca:</label></td>
-                <td><input type="text" value="<?php echo $marca ?>" name="marca" ></td>
-            </tr>
-            <tr>
-                <td><label for="modello">Modello:</label></td>
-                <td><input type="text" name="modello"  value = "<?php echo $modello ?>"></td>
-            </tr>
-        </table>
-        <input type="submit" value="Cerca">
-    </form>
+    <div class="search">
+        <h2>Cerca un tipo di scarpe</h2>
+        <form action="" method="post" class="">
+            <table id="tab_dati_personali">
+                <tr>
+                    <td><label for="marca">Marca:</label></td>
+                    <td><input type="text" value="<?php echo $marca ?>" name="marca" ></td>
+                </tr>
+                <tr>
+                    <td><label for="modello">Modello:</label></td>
+                    <td><input type="text" name="modello"  value = "<?php echo $modello ?>"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Cerca">
+        </form>
+    </div>
 
-    <?php 
+    <div class="grid">
 
-        require('../Data/connessione_db.php');
-        $sql = "SELECT immagine, marca,modello, cod_scarpa  from scarpa 
-                where marca LIKE '%$marca%' and modello LIKE '%$modello%' ";
+        <?php 
 
-        $ris = $conn->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");
+            require('../Data/connessione_db.php');
+            $sql = "SELECT immagine, marca,modello, cod_scarpa  from scarpa 
+                    where marca LIKE '%$marca%' and modello LIKE '%$modello%' ";
 
-
-        if ($ris->num_rows == 0){
-            echo "<p>Non sono stati trovati libri che soddisfano i requisiti di ricerca.</p>";}
-        else{
+            $ris = $conn->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");
 
 
-            echo "<form method='post' action=''><div class='elenco_libri'>";
-            foreach($ris as $riga){
-                $immagine = $riga["immagine"];
-                $marca = $riga["marca"];
-                $modello = $riga["modello"];
-                $cod_scarpa = $riga["cod_scarpa"];
-                echo <<<EOD
-                            <div class="scarpa">
-                                <div class="scarpa_img">
-                                    <img src="../immagini/$immagine" alt="">
+            if ($ris->num_rows == 0){
+                echo "<p>Non sono stati trovati libri che soddisfano i requisiti di ricerca.</p>";}
+            else{
+
+
+                echo "<form method='post' action=''>";
+                echo  "<div class='grid'>";
+                foreach($ris as $riga){
+                    $immagine = $riga["immagine"];
+                    $marca = $riga["marca"];
+                    $modello = $riga["modello"];
+                    $cod_scarpa = $riga["cod_scarpa"];
+                    // echo "ciaooooooooooooooooo";
+                    echo <<<EOD
+                                <div class="scarpa">
+                                    <div class="scarpa_img">
+                                        <img src="../immagini/$immagine" alt="">
                                     </div>
                                     <div class="scarpa_testi">
-                                        <p>Marca: $marca</p>
-                                        <p>Modello: $modello</p>
-                                        <p><input type='checkbox' name='cod_scarpa[]' value='$cod_scarpa'></p>
-                                    </div>
-                                </div>
-                            </div>
+                                        <div class="scarpa_testi_content">
+                                            <p>Marca: $marca</p>
+                                            <p>Modello: $modello</p>
+                                            <p><input type='checkbox' name='cod_scarpa[]' value='$cod_scarpa'> Preferiti?</p>
             
-                            EOD; 
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                
+                                EOD; 
+                }
+                echo  "</div>";
+                echo "</div><input type='submit' value='Conferma'></form>";
             }
-            echo "</div><input type='submit' value='Conferma'></form>";
-        }
-    ?>
+        ?>
+    </div>
     
     <?php 
         require('pagine/footer.php');

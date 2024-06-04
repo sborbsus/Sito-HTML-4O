@@ -18,43 +18,46 @@
     <link rel="stylesheet" href="../style.css">
     <title>Registazione</title>
 </head>
-<body>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td><label for="username">Username:</label></td>
-                <td><input type="text" value="username" name="$username" <?php echo "value='$username'" ?>required></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password:</label></td>
-                <td><input type="text" value="password" name="$password" <?php echo "value='$password'" ?>required></td>
-            </tr>
-            <tr>
-                <td><label for="conferma_password">Conferma password:</label></td>
-                <td><input type="text" value="conferma_password" name="$conferma_password" <?php echo "value='$conferma_password'" ?> required></td>
-            </tr>
-            <tr>
-                <td><label for="nome">Nome:</label></td>
-                <td><input type="text" value="nome" name="$nome" <?php echo "value='$nome'" ?>></td>
-            </tr>
-            <tr>
-                <td><label for="cognome">Cognome:</label></td>
-                <td><input type="text" value="cognome" name="$cognome" <?php echo "value='$cognome'" ?>></td>
-            </tr>
-            <tr>
-                <td><label for="email">E-mail:</label></td>
-                <td><input type="text" value="email" name="$email" <?php echo "value='$email'" ?>></td>
-            </tr>
-            <tr>
-                <td><label for="comune">Indirizzo:</label></td>
-                <td><input type="text" value="comune" name="$comune" <?php echo "value='$comune'" ?>></td>
-            </tr>
-            <tr>
-                <td><label for="indirizzo">Indirizzo:</label></td>
-                <td><input type="text" value="indirizzo" name="$indirizzo" <?php echo "value='$indirizzo'" ?>></td>
-            </tr>
-        </table>
-        <input type="submit" value="GAY!">
+<body class = "sfondo">
+    <div  claass = "contenuto">
+	<form action="" method="post">
+		<table>
+	            <tr>
+	                <td><label for="username">Username:</label></td>
+	                <td><input type="text" value="username" name="$username" <?php echo "value='$username'" ?>required></td>
+	            </tr>
+	            <tr>
+	                <td><label for="password">Password:</label></td>
+	                <td><input type="text" value="password" name="$password" <?php echo "value='$password'" ?>required></td>
+	            </tr>
+	            <tr>
+	                <td><label for="conferma_password">Conferma password:</label></td>
+	                <td><input type="text" value="conferma_password" name="$conferma_password" <?php echo "value='$conferma_password'" ?> required></td>
+	            </tr>
+	            <tr>
+	                <td><label for="nome">Nome:</label></td>
+	                <td><input type="text" value="nome" name="$nome" <?php echo "value='$nome'" ?>></td>
+	            </tr>
+	            <tr>
+	                <td><label for="cognome">Cognome:</label></td>
+	                <td><input type="text" value="cognome" name="$cognome" <?php echo "value='$cognome'" ?>></td>
+	            </tr>
+	            <tr>
+	                <td><label for="email">E-mail:</label></td>
+	                <td><input type="text" value="email" name="$email" <?php echo "value='$email'" ?>></td>
+	            </tr>
+	            <tr>
+	                <td><label for="comune">Indirizzo:</label></td>
+	                <td><input type="text" value="comune" name="$comune" <?php echo "value='$comune'" ?>></td>
+	            </tr>
+	            <tr>
+	                <td><label for="indirizzo">Indirizzo:</label></td>
+	                <td><input type="text" value="indirizzo" name="$indirizzo" <?php echo "value='$indirizzo'" ?>></td>
+	            </tr>
+	        </table>
+	</form>
+    </div>
+    <input type="submit" value="GAY!">
         
     </form>
 

@@ -19,79 +19,84 @@
     <title>Registazione</title>
 </head>
 <body class = "sfondo">
-    <div  claass = "contenuto">
-	<form action="" method="post">
-		<table>
-	            <tr>
-	                <td><label for="username">Username:</label></td>
-	                <td><input type="text" value="username" name="$username" <?php echo "value='$username'" ?>required></td>
-	            </tr>
-	            <tr>
-	                <td><label for="password">Password:</label></td>
-	                <td><input type="text" value="password" name="$password" <?php echo "value='$password'" ?>required></td>
-	            </tr>
-	            <tr>
-	                <td><label for="conferma_password">Conferma password:</label></td>
-	                <td><input type="text" value="conferma_password" name="$conferma_password" <?php echo "value='$conferma_password'" ?> required></td>
-	            </tr>
-	            <tr>
-	                <td><label for="nome">Nome:</label></td>
-	                <td><input type="text" value="nome" name="$nome" <?php echo "value='$nome'" ?>></td>
-	            </tr>
-	            <tr>
-	                <td><label for="cognome">Cognome:</label></td>
-	                <td><input type="text" value="cognome" name="$cognome" <?php echo "value='$cognome'" ?>></td>
-	            </tr>
-	            <tr>
-	                <td><label for="email">E-mail:</label></td>
-	                <td><input type="text" value="email" name="$email" <?php echo "value='$email'" ?>></td>
-	            </tr>
-	            <tr>
-	                <td><label for="comune">Indirizzo:</label></td>
-	                <td><input type="text" value="comune" name="$comune" <?php echo "value='$comune'" ?>></td>
-	            </tr>
-	            <tr>
-	                <td><label for="indirizzo">Indirizzo:</label></td>
-	                <td><input type="text" value="indirizzo" name="$indirizzo" <?php echo "value='$indirizzo'" ?>></td>
-	            </tr>
-	        </table>
-	</form>
+    <div  class = "contenuto">
+        <form action="" method="post">
+            <table>
+                    <tr>
+                        <td><label for="username">Username:</label></td>
+                        <td><input type="text" name="username"  value = "<?php echo $username ?>"required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="text"  name="password"  value = "<?php echo $password ?>"required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="conferma_password">Conferma password:</label></td>
+                        <td><input type="text"  name="conferma_password"  value = "<?php echo $conferma_password ?>"required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nome">Nome:</label></td>
+                        <td><input type="text"  name="nome"   value = "<?php echo $nome ?>" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cognome">Cognome:</label></td>
+                        <td><input type="text" name="cognome"   value = "<?php echo $cognome ?>" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mail:</label></td>
+                        <td><input type="text"  name="email"  value = "<?php echo $email ?>" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="comune">Comune:</label></td>
+                        <td><input type="text" name="comune"  value = "<?php echo $comune ?>" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="indirizzo">Indirizzo:</label></td>
+                        <td><input type="text"  name="indirizzo"  value = "<?php echo $indirizzo ?>" ></td>
+                    </tr>
+                    <td>
+                        <input type="submit" value="GAY!">
+
+                    </td>
+                </table>
+        </form>
     </div>
-    <input type="submit" value="GAY!">
         
     </form>
 
-    <p>
-        <?php
-            if($password != $conferma_password){
-                echo "Le password sono eterosessuali, non va bene!";
+    
+    <?php
+        if($password != $conferma_password){
+            echo "Le password sono eterosessuali, non va bene!";
+        }
+        else{
+            require('../Data/connessione_db.php');
+            $sql = "SELECT username
+            FROM utente
+            WHERE username = '$username'";
+            $ris = $conn->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");
+
+            if ($ris->num_rows > 0 or $username == ""){
+                echo "Questo username è già stato usato";            
             }
             else{
-                $sql = "SELECT username
-                FROM utenti
-                WHERE username = '$username'";
-                $ris = $conn->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");
-                if ($ris->num_rows > 0){
-                echo "Questo username è già stato usato";            
-                }
-                else{
-                    $ins = "INSERT INTO utenti(username,password, nome,cognome,email,comune,indirizzo) 
-                            VALUES ('$username', '$password','$nome','$cognome', '$email', '$comune', '$indirizzo')";
-                    if ($conn->query($sql_insert)){
-                        session_start();
-                        
-                        $_SESSION["username"] = $username;
-                        $conn->close();
-                        
-                        echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi...";
-                        header('Refresh: 5; URL=home.php');
-                    } else {
-                        echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $conn->error;
-                    }
+                $sql_insert = "INSERT INTO utente(username,password, nome,cognome,email,comune,indirizzo) 
+                        VALUES ('$username', '$password','$nome','$cognome', '$email', '$comune', '$indirizzo')";
+                if ($conn->query($sql_insert)){
+                    session_start();
+                    
+                    $_SESSION["username"] = $username;
+                    $conn->close();
+                    
+                    echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi...";
+                    header('Refresh: 5; URL=home.php');
+                } else {
+                    echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $conn->error;
                 }
             }
-        ?>
-    </p>
+        }
+    ?>
+    
 
     <?php 
         require('footer.php');

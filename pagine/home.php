@@ -13,11 +13,9 @@
 
     if(isset($_POST["cod_scarpa"])){
         foreach( $_POST["cod_scarpa"] as $cod_scarpa){
-            $myquery = "INSERT INTO ordine (cod_utente, cod_scarpa,)
-                                        VALUES ('$cod_utente', '$cod_scarpa',)";
-
+            $myquery = "INSERT INTO ordine (cod_utente, cod_scarpa)
+                                        VALUES ('$cod_utente', '$cod_scarpa')";
         }
-
     }
 ?>
 
@@ -59,41 +57,55 @@
 
             $ris = $conn->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");
 
+            // $prefs = "SELECT cod_utente, cod_scarpa from ordine where cod_utente = '$username' ";
 
+            // $prefe = $conn->query($prefs) or die("<p>Query fallita! ".$conn->error."</p>");
             if ($ris->num_rows == 0){
+                // $prefe->fetch_assoc("cod_scarpa");
                 echo "<p>Non sono stati trovati libri che soddisfano i requisiti di ricerca.</p>";}
             else{
-
-
-                echo "<form method='post' action=''>";
-                echo  "<div class='grid'>";
-                foreach($ris as $riga){
-                    $immagine = $riga["immagine"];
-                    $marca = $riga["marca"];
-                    $modello = $riga["modello"];
-                    $cod_scarpa = $riga["cod_scarpa"];
-                    // echo "ciaooooooooooooooooo";
-                    echo <<<EOD
-                                <div class="scarpa">
-                                    <div class="scarpa_img">
-                                        <img src="../immagini/$immagine" alt="">
-                                    </div>
-                                    <div class="scarpa_testi">
-                                        <div class="scarpa_testi_content">
-                                            <p>Marca: $marca</p>
-                                            <p>Modello: $modello</p>
-                                            <p><input type='checkbox' name='cod_scarpa[]' value='$cod_scarpa'> Preferiti?</p>
-            
+                // if($prefe->num_rows > 0){
+                    echo "<form method='post' action=''>";
+                    echo  "<div class='grid'>";
+                    foreach($ris as $riga){
+                        $immagine = $riga["immagine"];
+                        $marca = $riga["marca"];
+                        $modello = $riga["modello"];
+                        // if ($prefe->num_rows > 0) {
+                        //     $prefe = $prefe->fetch_assoc();
+                        //     $pref = $prefe["cod_scarpa"];
+                        // }
+                        $cod_scarpa = $riga["cod_scarpa"];
+                        $check = "<p><input type='checkbox' name='cod_scarpa[]' value='$cod_scarpa'> Preferiti?</p>";
+                        // if ($pref == "") $disp = "no"; else $disp = "si";
+                        // if ($pref) $check = "" ;
+                        
+                        
+                        // echo "ciaooooooooooooooooo";
+                        echo <<<EOD
+                                    <div class="scarpa">
+                                        <div class="scarpa_img">
+                                            <img src="../immagini/$immagine" alt="">
                                         </div>
+                                        <div class="scarpa_testi">
+                                            <div class="scarpa_testi_content">
+                                                <p>Marca: $marca</p>
+                                                <p>Modello: $modello</p>
+                                               
+                                                $check
+                                            </div>
+                                        </div>
+                                        
                                     </div>
-                                    
-                                </div>
-                
-                                EOD; 
+                    
+                                    EOD; 
+                    }
+                    echo  "</div>";
+                    echo "</div><input type='submit' value='Conferma'></form>";
+
                 }
-                echo  "</div>";
-                echo "</div><input type='submit' value='Conferma'></form>";
-            }
+
+            
         ?>
     </div>
     

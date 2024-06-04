@@ -31,8 +31,9 @@
             </table>
             <input type="submit" value="accedi">
             
+            <br>
             <a href="registration.php">
-                <input type="submit" value="Registrati">
+                <p>Registrati!</p>
             </a>
         </form>
     </div>

@@ -13,25 +13,29 @@
 
     <title>Login</title>
 </head>
-<body>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td><label for="username">Username:</label></td>
-                <td><input type="text"  value = "<?php echo $username ?>" name="username" required></td>
-            </tr>
-            <tr>
-            <td>
-                <label for="password">Password:</label></td>
-                <td><input type="text" name="password" required></td>
-            </tr>
-        </table>
-        <input type="submit" value="accedi">
-        
-        <a href="registration.php">
-            <input type="submit" value="Registrati">
-        </a>
-    </form>
+<body class = "sfondo">
+    <div class = "contenuto">        
+        <h1 class = "arancio">SneakersHub</h1>
+        <h2>Pagina di Login</h2>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <td><input type="text"  value = "<?php echo $username ?>" name="username" required></td>
+                </tr>
+                <tr>
+                <td>
+                    <label for="password">Password:</label></td>
+                    <td><input type="text" name="password" required></td>
+                </tr>
+            </table>
+            <input type="submit" value="accedi">
+            
+            <a href="registration.php">
+                <input type="submit" value="Registrati">
+            </a>
+        </form>
+    </div>
     <?php
         if (isset($_POST["username"]) and isset($_POST["password"])){
             require("../Data/connessione_db.php");

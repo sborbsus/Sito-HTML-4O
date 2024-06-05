@@ -11,10 +11,15 @@
     if (isset($_POST["marca"])) $marca = $_POST["marca"]; else $marca = "";
     if (isset($_POST["modello"])) $modello = $_POST["modello"]; else $modello = "";
 
-    if(isset($_POST["cod_scarpa"])){
-        foreach( $_POST["cod_scarpa"] as $cod_scarpa){
-            $myquery = "INSERT INTO ordine (cod_utente, cod_scarpa)
-                                        VALUES ('$cod_utente', '$cod_scarpa')";
+    if(isset($_POST['cod_scarpa'])){
+        foreach($_POST['cod_scarpa'] as $cod_scarpa) {
+            // echo "ciaoooo";
+            //echo $libro . '<br/>';
+            require("../Data/connessione_db.php");
+            $sql = "UPDATE ordine
+                    SET cod_utente = '$username'
+                    WHERE cod_scarpa = '$cod_scarpa'";
+            $conn->query($sql) or die("<p>Query fallita!</p>");
         }
     }
 ?>
@@ -65,8 +70,9 @@
                 echo "<p>Non sono stati trovati libri che soddisfano i requisiti di ricerca.</p>";}
             else{
                 // if($prefe->num_rows > 0){
-                    echo "<form method='post' action=''>";
-                    echo  "<div class='grid'>";
+                    echo "<form method='post' action=''>
+                    <div class='grid'>";
+                    // echo  "";
                     foreach($ris as $riga){
                         $immagine = $riga["immagine"];
                         $marca = $riga["marca"];
@@ -101,16 +107,25 @@
                                     EOD; 
                     }
                     echo  "</div>";
-                    echo "</div><input type='submit' value='Conferma'></form>";
+                    echo "
+                    <table>
+                    <tr>
+                        <td><input type='submit' value='Conferma' style='margin-bottom: 50px'></td>
+                    </tr>
+                </table> 
+                    "; 
+                    echo "</form>";
 
                 }
 
             
         ?>
+        
+
     </div>
     
     <?php 
-        require('pagine/footer.php');
+        require('footer.php');
     ?>
 </body>
 </html>

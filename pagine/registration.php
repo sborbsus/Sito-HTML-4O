@@ -76,22 +76,30 @@
             WHERE username = '$username'";
             $ris = $conn->query($sql) or die("<p>Query fallita! ".$conn->error."</p>");
 
-            if ($ris->num_rows > 0 or $username == ""){
-                echo "Questo username è già stato usato";            
-            }
-            else{
-                $sql_insert = "INSERT INTO utente(username,password, nome,cognome,email,comune,indirizzo) 
-                        VALUES ('$username', '$password','$nome','$cognome', '$email', '$comune', '$indirizzo')";
-                if ($conn->query($sql_insert)){
-                    session_start();
+
+            if($username == ""){
+                echo "<p>Inserisci nome utente</p>";
+            }else{
+
+                if ($ris->num_rows > 0){
+                    echo "Questo username è già stato usato";            
+                }
+                else{
                     
-                    $_SESSION["username"] = $username;
-                    $conn->close();
-                    
-                    echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi...";
-                    header('Refresh: 5; URL=home.php');
-                } else {
-                    echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $conn->error;
+    
+                    $sql_insert = "INSERT INTO utente(username,password, nome,cognome,email,comune,indirizzo) 
+                            VALUES ('$username', '$password','$nome','$cognome', '$email', '$comune', '$indirizzo')";
+                    if ($conn->query($sql_insert)){
+                        session_start();
+                        
+                        $_SESSION["username"] = $username;
+                        $conn->close();
+                        
+                        echo "Registrazione effettuata con successo!<br>sarai ridirezionato alla home tra 5 secondi...";
+                        header('Refresh: 5; URL=home.php');
+                    } else {
+                        echo "Non è stato possibile effettuare la registrazione per il seguente motivo: " . $conn->error;
+                    }
                 }
             }
         }

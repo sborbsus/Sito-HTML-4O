@@ -32,7 +32,10 @@ header{
     background-color: white;
     z-index: 1;    
 }
-
+table{
+    display: flex;
+    justify-content: center;
+}
 /* .nav a:hover{color: blue;} */
 .nav li{
     flex-wrap: wrap;
